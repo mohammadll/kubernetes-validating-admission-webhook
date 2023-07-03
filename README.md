@@ -21,3 +21,13 @@ Step2:
 ```
 kubectl apply -f validating-admission-controller.yml
 ```
+
+Test
+
+```
+kubectl create deployment nginx --image=nginx --replicas=1 -n production
+```
+test it to check it works by the above command!
+you will get an error message to change the tag from latest to something else
+
+if you deploy it in prod or production namespaces , the error meesage appears
