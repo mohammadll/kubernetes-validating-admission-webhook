@@ -8,3 +8,16 @@ Admission webhooks are HTTP callbacks that receive admission requests and do som
 
 ----
 In this repository, I tried to show you its power . Maybe we want to prevent deployments that contain images with the << latest >> tag from being applied in the production environment . I wrote a script using flask  , So if a someone tries to apply deployments in production namespace, They will get an error message to change the image tag from << latest >>
+
+
+Step 1:
+
+```
+docker build -t validate:v1 .
+```
+
+Step2:
+
+```
+kubectl apply -f validating-admission-controller.yml
+```
