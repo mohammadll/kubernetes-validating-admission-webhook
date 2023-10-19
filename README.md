@@ -22,7 +22,7 @@ Step2:
 kubectl apply -f validating-admission-controller.yml
 ```
 
-Test
+Test the validation:
 
 ```
 kubectl create deployment nginx --image=nginx --replicas=1 -n production
